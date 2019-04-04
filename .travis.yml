@@ -1,0 +1,45 @@
+language: python
+
+dist: xenial
+
+python:
+- "2.7"
+- "3.4"
+- "3.5"
+- "3.6"
+- "3.7"
+
+branches:
+  except:
+  - gh-pages
+
+addons:
+  apt:
+    packages:
+    - graphviz
+    - shellcheck
+    - python-pip
+
+before_install:
+- pip install -U pip
+- pip install pylint
+
+install:
+- make release-build
+- make install
+
+script:
+- make selftest
+
+after_script:
+- find selftest_results -name "*.log" -exec cat {} \;
+
+deploy:
+  provider: pypi
+  skip_existing: true
+  on:
+    tags: true
+  user:
+    secure: USE_TRAVIS_ENCRYPT_TO_GENERATE_THIS
+  password:
+    secure: USE_TRAVIS_ENCRYPT_TO_GENERATE_THIS
