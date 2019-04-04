@@ -1,45 +1,36 @@
 language: python
-
 dist: xenial
-
 python:
-- "2.7"
-- "3.4"
-- "3.5"
-- "3.6"
-- "3.7"
-
+- '2.7'
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
 branches:
   except:
   - gh-pages
-
 addons:
   apt:
     packages:
     - graphviz
     - shellcheck
     - python-pip
-
 before_install:
 - pip install -U pip
 - pip install pylint
-
 install:
 - make release-build
 - make install
-
 script:
 - make selftest
-
 after_script:
 - find selftest_results -name "*.log" -exec cat {} \;
-
 deploy:
   provider: pypi
   skip_existing: true
   on:
     tags: true
   user:
-    secure: USE_TRAVIS_ENCRYPT_TO_GENERATE_THIS
+    secure: RmzSM/fGOykgICa0vACuEJz7GxyJOAKSHPaY86uF2CpVgqA6RpVNv4+fFFjQcFZRp6/5lR3Uen+oA+hKaAEZunxsb/m4Zbt1LwnastMXqYSvkGxDOce+fX5YW4fJvcCmiP1oIsJuachqgndtmNLvs6uIN03ek2CIMzMUZFvIbQqrnxjfCTBpL0INHjCSupPRvRXXt68Ke4eIr6igDx2d/k2K3aKHVmVLmP/ePcrxEAQIwzvBYQRiRPMaZEuPvU35HaKalHt1wvynRio9V7M53NRkyqP+NDbusSfEYtyGE0oiCrlbSCn0nB2FcNuf5HnEccvt8sistomwqdpV54BOf6vgg+rAMXHFFuCjDarcTLKABdmoYcvV7tBgIeXt3bVlQpiLzWJsH6DX5MwP4YfNix+OGueC25MYnjJFGTc9ShI+r5ey+yLwVz01q6MeFrKtyeyTN8KyXDQwhfdYCsN1eTsr4aTwa8HCBWtm/RPSyUrGYYlRW+2d/pOcJhKY28HnE6nlCKmbqefhS4y/u8kbiHr7DcW7rZGbjS+ndUObC9F89eCho8v7kdx7/Qa3Q9R56ye4yflCye17aMgmMOeTJHY+ACJwlttsQF3ow7f74Rk4LYF4e5MfLxotB1H+ozYPnI26rQaSPrX2QzB3o9wZIdp6RXO06dZxvXO+IjIiG54=
   password:
-    secure: USE_TRAVIS_ENCRYPT_TO_GENERATE_THIS
+    secure: ZvfspL1Tyod/CRC8oclUl3h1wT/WJ28v+sKNzWc3Rf2Qm8gq62ppplKbPVDccmiKBikgO5m90kzujUrLQr1jTL/RnUk18rb1wu2IqRYS7ptUMCFpb586m5mxQ2frf91imvtd0y92HBUCSz8F5EkxQjcWUL0yGPtYtlzFNrchgCXz5ZSUKvNSAhWvKRU1k077oAtXWhES9YA/YdPoxveNX4m1PENWM9jIe4NpFyn8NAlP/V43xNU7pxAxWyeS/6Rn88sYyNysF8o6LUaHOyKYQixZ7rrCSaAsNOpLH976d1giiBIRQx9yktcb/Bst4OT2UVWHW3dqOPgIWw8IeanCK07WAY/Mqa/LuUiIymktzFbk/7bcYijMCw7mc50FRsoMgxYGQJBtCmH5GqDqo/kGxJACG1tb9hTASL98jhfGcItW+52FkQh1s1UZh7MP2a2E8i8VRnLUWNGIsql6eYDPhFWlYIdRXh3wrhPRhe5Z807efMQdc1+Z7YIIUfHnptONT4lxmHaVju9j1NdGkBTh2RBEnCJ3JjpCm9Fe4iRjRAkqXxDoZ0PnlT9nbZyCRhO0BgcB45NRGMJ/L2KF8g3RlRNdOM0kyn5qXE8/buc5ZpnMrQcPTfKLw51YF36C4HsPXjzXMelcQoCKFgMxxU8uIcxU4yRauXvVMzt4kWSE54g=
