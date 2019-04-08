@@ -83,7 +83,7 @@ Start the test-runner and view the report:
 
   # Run e.g. the pblk smoketest
   cij_runner \
-      $CIJ_TESTPLANS/pblk_smoketest.plan \
+      $CIJ_TESTPLANS/pblk_000_smoketest.plan \
       target_env.sh \
       --output $RESULTS
 
