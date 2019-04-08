@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-# Verify that pblk create/remove/recovery works
+# Verify that xfstests -g quick run without error
 #
-# This test runs trough a factory-create, remove, recover remove sequence
-# 
+# Verify that xfstests -g quick run without error
+#
 CIJ_TEST_NAME=$(basename "${BASH_SOURCE[0]}")
 export CIJ_TEST_NAME
 # shellcheck source=modules/cijoe.sh
@@ -11,13 +11,11 @@ source "$CIJ_ROOT/modules/cijoe.sh"
 test::enter
 test::require block
 
-xfstests::prepare
-if [[ $? -ne 0 ]]; then
+if ! xfstests::prepare; then
    test::fail "Failed to prepare for test"
 fi
 
-xfstests::run "-g quick"
-if [[ $? -ne 0 ]]; then
+if ! xfstests::run "-g quick"; then
    xfstests::cleanup
    test::fail "At least one xfs test failed"
 fi

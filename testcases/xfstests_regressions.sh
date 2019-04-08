@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-# Verify that previos regressions found in pblk by xfstest do not cree up again
+# Verify that xfstests generic/127 run without error
+#
+# These xftests are have previously triggered bugs in PBLK
 #
 CIJ_TEST_NAME=$(basename "${BASH_SOURCE[0]}")
 export CIJ_TEST_NAME
@@ -9,17 +11,14 @@ source "$CIJ_ROOT/modules/cijoe.sh"
 test::enter
 test::require block
 
-xfstests::prepare
-if [[ $? -ne 0 ]]; then
+if ! xfstests::prepare; then
    test::fail "Failed to prepare for test"
 fi
 
-xfstests::run "generic/127"
-if [[ $? -ne 0 ]]; then
+if ! xfstests::run "generic/127"; then
    xfstests::cleanup
    test::fail "At least one xfs test failed"
 fi
-
 
 xfstests::cleanup
 

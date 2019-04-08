@@ -3,7 +3,7 @@ direct=1
 ioengine=libaio
 numjobs=1
 iodepth=16
-size=10000M
+size=2000M
 
 [rand-write]
 stonewall
