@@ -18,7 +18,7 @@ def read(*parts):
 
 setup(
     name="cijoe-pkg-pblk",
-    version="0.0.1",
+    version="0.0.2",
     description="CIJOE: pblk package",
     long_description=read('README.rst'),
     author="Simon A. F. Lund",
