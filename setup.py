@@ -26,7 +26,7 @@ setup(
     url="https://github.com/safl/cijoe-pkg-pblk",
     license="Apache License 2.0",
     install_requires=[
-        "cijoe (==0.0.21)"
+        "cijoe (==0.0.22)"
     ],
     zip_safe=False,
     data_files=[
