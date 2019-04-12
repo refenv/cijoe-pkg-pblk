@@ -1,5 +1,5 @@
 """
-    Definition of CIJOE/pblk distribution package
+    Definition of CIJOE/lightnvm distribution package
 """
 import codecs
 import glob
@@ -17,13 +17,13 @@ def read(*parts):
         return pfp.read()
 
 setup(
-    name="cijoe-pkg-pblk",
-    version="0.0.4",
-    description="CIJOE: pblk package",
+    name="cijoe-pkg-lightnvm",
+    version="0.0.5",
+    description="CIJOE: lightnvm package",
     long_description=read('README.rst'),
     author="Simon A. F. Lund",
     author_email="slund@cnexlabs.com",
-    url="https://github.com/safl/cijoe-pkg-pblk",
+    url="https://github.com/safl/cijoe-pkg-lightnvm",
     license="Apache License 2.0",
     install_requires=[
         "cijoe (==0.0.24)"

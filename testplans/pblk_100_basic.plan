@@ -7,7 +7,7 @@ hooks: [ sysinf, dmesg ]
 testsuites:
   - name: Lifecycle
     testcases:
-      - pblk_lifecycle.sh
+      - lnvm_lifecycle.sh
 
   - name: IO
     hooks: [ pblk ]

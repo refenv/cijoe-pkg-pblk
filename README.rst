@@ -1,12 +1,12 @@
-cijoe-pkg-pblk: cijoe testcases and testplans for pblk
-======================================================
+cijoe-pkg-lightnvm: cijoe package for the lightnvm subsystem, PBLK, and ZBLK
+============================================================================
 
-.. image:: https://img.shields.io/pypi/v/cijoe-pkg-pblk.svg
-   :target: https://pypi.org/project/cijoe-pkg-pblk
+.. image:: https://img.shields.io/pypi/v/cijoe-pkg-lightnvm.svg
+   :target: https://pypi.org/project/cijoe-pkg-lightnvm
    :alt: PyPI
 
-.. image:: https://travis-ci.com/refenv/cijoe-pkg-pblk.svg?branch=master
-   :target: https://travis-ci.com/refenv/cijoe-pkg-pblk
+.. image:: https://travis-ci.com/refenv/cijoe-pkg-lightnvm.svg?branch=master
+   :target: https://travis-ci.com/refenv/cijoe-pkg-lightnvm
    :alt: Build Status
 
 Install
@@ -14,17 +14,17 @@ Install
 
 The package is distributed via PyPi, run the following to command to install:
 
-Install ``cijoe-pkg-pblk`` system-wide via the pip:
+Install ``cijoe-pkg-lightnvm`` system-wide via the pip:
 
 .. code-block:: bash
 
-  sudo pip install cijoe-pkg-pblk
+  sudo pip install cijoe-pkg-lightnvm
 
 Or install it user-level:
 
 .. code-block:: bash
 
-  pip install --user cijoe-pkg-pblk
+  pip install --user cijoe-pkg-lightnvm
 
 .. note::
 
@@ -97,9 +97,9 @@ If you find bugs or need help then feel free to submit an `Issue`_. If you want
 to get involved head over to the `GitHub page`_ to get the source code and
 submit a `Pull request`_ with your changes.
 
-.. _Quickstart Guide: https://cijoe-pkg-pblk.readthedocs.io/en/latest/quickstart.html
-.. _Installation: https://cijoe-pkg-pblk.readthedocs.io/
-.. _Usage: https://cijoe-pkg-pblk.readthedocs.io/
-.. _GitHub page: https://github.com/refenv/cijoe-pkg-pblk
-.. _Pull request: https://github.com/refenv/cijoe-pkg-pblk/pulls
-.. _Issue: https://github.com/refenv/cijoe-pkg-pblk/issues
+.. _Quickstart Guide: https://cijoe-pkg-lightnvm.readthedocs.io/en/latest/quickstart.html
+.. _Installation: https://cijoe-pkg-lightnvm.readthedocs.io/
+.. _Usage: https://cijoe-pkg-lightnvm.readthedocs.io/
+.. _GitHub page: https://github.com/refenv/cijoe-pkg-lightnvm
+.. _Pull request: https://github.com/refenv/cijoe-pkg-lightnvm/pulls
+.. _Issue: https://github.com/refenv/cijoe-pkg-lightnvm/issues
