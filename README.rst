@@ -49,6 +49,9 @@ Run CIJOE interactively and define the target environment:
   # Open up your favorite editor and modify accordingly
   vim target_env.sh
 
+This will create a environment definition for testing **PBLK**, if you want to
+test **ZBLK** instead, then use the ``refenv-zblk.sh`` instead.
+
 Create virtual environment definition for CIJOE
 ===============================================
 
@@ -71,6 +74,9 @@ Run CIJOE interactively and define the target environment:
   # Open up your favorite editor and modify accordingly
   vim target_env.sh
 
+This will create a environment definition for testing **PBLK**, if you want to
+test **ZBLK** instead, then use the ``refenv-zblk.sh`` instead.
+
 Running tests
 =============
 
@@ -92,6 +98,9 @@ Start the test-runner and view the report:
 
   # Inspect the test-report
   xdg-open $RESULTS/report.html
+
+This will create a environment definition for testing **PBLK**, if you want to
+test **ZBLK** instead, then use the ``zblk_000_smoketest.plan`` instead.
 
 If you find bugs or need help then feel free to submit an `Issue`_. If you want
 to get involved head over to the `GitHub page`_ to get the source code and
