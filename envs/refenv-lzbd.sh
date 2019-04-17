@@ -9,7 +9,7 @@
 #export NVME_DEV_NAME=nvme0n1
 
 # lightnvm:
-: "${LNVM_DEV_TYPE:=zblk}";                     export LNVM_DEV_TYPE
+: "${LNVM_DEV_TYPE:=lzbd}";                     export LNVM_DEV_TYPE
 : "${LNVM_BGN:=0}";                             export LNVM_BGN
 : "${LNVM_END:=31}";                            export LNVM_END
 
